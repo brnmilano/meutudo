@@ -1,0 +1,140 @@
+.container {
+  display: flex;
+  flex-direction: row;
+
+  .contentWrapper {
+    padding: 15px 0;
+  }
+
+  .headingWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .clientWrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+
+    @media screen and (max-width: 768px) {
+      margin-top: 0;
+      padding: 0 20px;
+    }
+
+    .offerImage {
+      margin-right: 10px;
+      height: 45px;
+    }
+  }
+
+  .interestWrapeer {
+    margin-bottom: 80px;
+
+    @media screen and (max-width: 768px) {
+      > div {
+        max-width: 310px;
+        margin: 0 auto;
+        text-align: center;
+      }
+    }
+
+    .errorImage {
+      width: 220px;
+      height: auto;
+      margin-left: 80px;
+      margin-bottom: 42px;
+
+      @media screen and (max-width: 768px) {
+        margin-left: 58px;
+
+        > div {
+          background-color: red;
+        }
+      }
+    }
+  }
+
+  .newWrapper {
+    background-color: #f0f0f0;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 45px;
+
+    @media screen and (max-width: 768px) { 
+      border-radius: 0;
+    }
+
+    .new {
+      padding: 4px 10px;
+      border-radius: 8px;
+      background-color: #ebd2e0;
+      text-transform: uppercase;
+      margin-right: 8px;
+      margin-bottom: 26px;
+    }
+
+    .newContent {
+      display: flex;
+      gap: 10px;
+
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+      }
+
+      .card {
+        display: flex;
+        align-items: center;
+        background-color: #ffffff;
+        padding: 16px 42px;
+        border-radius: 16px;
+        width: 100%;
+        border: 1.5px solid #dcdcdc;
+
+        img {
+          height: 42px;
+          margin-right: 20px;
+        }
+
+        .cardContent {
+          > div {
+            max-width: 210px;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .helpWrapper {
+    border: 1.5px solid #dcdcdc;
+    border-radius: 16px;
+    padding: 16px 36px;
+
+    @media screen and (max-width: 768px) {
+      margin: 0 20px;      
+    }
+
+    a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-decoration: none;
+      > div {
+        &:first-child {
+          margin-bottom: 5px;
+        }
+      }
+
+      img {
+        height: auto;
+        width: 100px;
+      }
+    }
+  }
+}
