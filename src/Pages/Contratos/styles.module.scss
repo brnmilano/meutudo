@@ -1,0 +1,18 @@
+.border {
+  > div {
+    div {
+      div {
+        button {
+          width: 100%;
+          font-weight: 700;
+          color: #000000 !important;
+
+          &:active,
+          :focus {
+            color: #d22688 !important;
+          }
+        }
+      }
+    }
+  }
+}
