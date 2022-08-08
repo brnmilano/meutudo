@@ -1,0 +1,75 @@
+.container {
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    width: 100%;
+    max-width: 180px;
+
+    .sideBar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-bottom: 40px;
+        width: 100%;
+        background: #000000;
+        border-bottom-right-radius: 80px;
+        color: #ffffff;
+
+        .logoImage {
+            height: 120px;
+            width: 120px;
+            margin-left: 22px;
+        }
+
+        .menuWrapper {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+
+            .menuItems {
+                display: flex;
+                gap: 16px;
+                padding: 6px 16px;
+                align-items: center;
+                color: #7a7a7a;
+                margin-bottom: 10px;
+
+                a {
+                    text-decoration: none;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                div {
+                    color: #7a7a7a !important;
+
+                    &:active {
+                        color: #ffffff !important;
+                    }
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                &:active {
+                    border-right: 4px solid #d22688;
+                    color: #d22688;
+                }
+            }
+        }
+        .buttonLogout {
+            a {
+                text-decoration: none;
+                text-transform: none;
+                color: #d22688;
+            }
+        }
+    }
+}

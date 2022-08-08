@@ -1,0 +1,34 @@
+.input {
+  border: none;
+  background: none;
+}
+
+.input {
+  border-width: 0;
+
+  width: 100%;
+  padding: 15px 20px;
+}
+
+.input::placeholder {
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.input:focus-visible {
+  outline: 0px;
+}
+
+.input:focus:active {
+  background: none;
+}
+
+.input:active {
+  background: none;
+}
+
+@media screen and (max-width: 700px) {
+  .input {
+    padding: 15px 20px 15px 20px;
+  }
+}
