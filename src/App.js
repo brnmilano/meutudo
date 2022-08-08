@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import useIsMobile from "./helpers/useIsMobile";
+import { Box } from "@mui/system";
+import TopBar from "./Components/TopBar";
+import SideBar from "./Components/SideBar";
+import Pages from "./Pages";
 
 function App() {
+  const isMobile = useIsMobile({ size: 768 });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Box>
+        {isMobile ? <TopBar /> : <SideBar />}
+      </Box>
+
+      <Pages />
     </div>
   );
 }
