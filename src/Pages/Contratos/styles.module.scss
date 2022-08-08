@@ -1,18 +1,40 @@
-.border {
-  > div {
-    div {
-      div {
-        button {
-          width: 100%;
-          font-weight: 700;
-          color: #000000 !important;
+.container {
+  .headingWrapper {
+    display: flex;
+    justify-content: center;
+  }
 
-          &:active,
-          :focus {
-            color: #d22688 !important;
+  .border {
+    > div {
+      div {
+        div {
+          button {
+            width: 100%;
+            font-weight: 700;
+            color: #000000 !important;
+
+            &:active,
+            :focus {
+              color: #d22688 !important;
+            }
           }
         }
       }
+    }
+  }
+
+  .teste {
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 180px;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    .tabText {
+      margin-top: 30px;
     }
   }
 }

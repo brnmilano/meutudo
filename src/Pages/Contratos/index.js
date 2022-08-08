@@ -6,6 +6,8 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Heading from "../../Components/Heading";
 import styles from "./styles.module.scss";
+import Container from "../../Components/Container";
+import Notification from "./Assets/notification.png";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -48,8 +50,9 @@ export default function Contratos() {
   };
 
   return (
-    <Box>
-        <Box>
+    <Box className={styles.container}>
+      <Container>
+        <Box className={styles.headingWrapper}>
           <Heading fontSize={20} fontWeight={600}>
             Contratos
           </Heading>
@@ -65,13 +68,25 @@ export default function Contratos() {
             <Tab label="Finalizado" {...a11yProps(1)} />
           </Tabs>
         </Box>
-        <TabPanel value={value} index={0}>
-          Você não possui empréstimos a serem exibidos.
-        </TabPanel>
 
-        <TabPanel value={value} index={1}>
-          Você não possui empréstimos a serem exibidos.
-        </TabPanel>
+        <Box className={styles.teste}>
+          <TabPanel value={value} index={0}>
+            <img src={Notification} alt="Sem Empréstimos" />
+
+            <Box className={styles.tabText}>
+              Você não possui empréstimos a serem exibidos.
+            </Box>
+          </TabPanel>
+
+          <TabPanel value={value} index={1}>
+            <img src={Notification} alt="Sem Empréstimos" />
+
+            <Box className={styles.tabText}>
+              Você não possui empréstimos a serem exibidos.
+            </Box>
+          </TabPanel>
+        </Box>
+      </Container>
     </Box>
   );
 }
