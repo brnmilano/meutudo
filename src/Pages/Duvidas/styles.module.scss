@@ -1,0 +1,46 @@
+.container {
+    padding-top: 20px;
+
+    .headingWrapper {
+        display: flex;
+        justify-content: center;
+    }
+
+    .doubtWrapper {
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 16px;
+        max-width: 500px;
+        margin: 0 auto;
+
+        > div {
+            margin-bottom: 25px;
+        }
+
+        .contentWrapper {
+            > a {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                padding: 14px;
+                border-bottom: 2px solid #dcdcdc;
+            }
+
+            .arrow {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 100%;
+                width: 25px;
+                height: 25px;
+                margin-left: 16px;
+                background: #ffd6ee;
+
+                svg {
+                    color: #d83c95;
+                }
+            }
+        }
+    }
+}
