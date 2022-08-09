@@ -1,0 +1,66 @@
+.container {
+    display: flex;
+
+    .headingWrapper {
+        display: flex;
+        max-width: 415px;
+        min-height: 76px;
+        align-items: center;
+        justify-content: space-between;
+
+        .arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 16px;
+
+            svg {
+                color: #d83c95;
+            }
+        }
+    }
+
+    .privateInfosWrapper {
+        .clientName {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #000000;
+            border-radius: 20px;
+            padding: 30px 20px;
+            margin-bottom: 20px;
+
+            .perfilImage {
+                position: relative;
+                height: 80px;
+                width: 80px;
+                border-radius: 50%;
+                overflow: hidden;
+                margin-bottom: 20px;
+
+                img {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    -webkit-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .infosWrapper {
+            display: flex;
+            flex-direction: column;
+            border: 1.5px solid #dcdcdc;
+            padding: 20px;
+            border-radius: 20px;
+
+            > h1 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
