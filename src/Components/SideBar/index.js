@@ -7,6 +7,7 @@ import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import Text from "../Text";
 import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
 
 export default function SideBar() {
   return (
@@ -19,11 +20,11 @@ export default function SideBar() {
         <Box className={styles.menuWrapper}>
           <Box className={styles.menuItems}>
             <HomeOutlinedIcon />
-            <a href="http://localhost:3000/" rel="noopener noreferrer">
+            <Link to="contratos">
               <Text fontWeight={500} fontSize={14} color="#000000">
                 Home
               </Text>
-            </a>
+            </Link>
           </Box>
 
           <Box className={styles.menuItems}>
