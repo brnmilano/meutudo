@@ -1,4 +1,8 @@
 // import styles from "./styles.module.scss";
+import * as React from "react";
+import Button from "@mui/material/Button";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
 import { Box } from "@mui/system";
 import Container from "../../Components/Container";
 import styles from "./styles.module.scss";
@@ -13,9 +17,19 @@ import Doubt from "./Assets/doubt.svg";
 import SideBar from "../../Components/SideBar";
 import Navigation from "../../Components/BottomNavigation";
 import useIsMobile from "../../helpers/useIsMobile";
+import Mail from "./Assets/mail.png";
 
 export default function Home() {
   const isMobile = useIsMobile({ size: 768 });
+
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   return (
     <Box className={styles.container}>
@@ -23,7 +37,37 @@ export default function Home() {
         {isMobile ? (
           <>
             <Box className={styles.topBar}>
-              <NotificationsOutlinedIcon />
+              <Box className={styles.dropDown}>
+                <Button
+                  id="basic-button"
+                  aria-controls={open ? "basic-menu" : undefined}
+                  aria-haspopup="true"
+                  aria-expanded={open ? "true" : undefined}
+                  onClick={handleClick}
+                >
+                  <NotificationsOutlinedIcon />
+                </Button>
+                <Menu
+                  id="basic-menu"
+                  anchorEl={anchorEl}
+                  open={open}
+                  onClose={handleClose}
+                  MenuListProps={{
+                    "aria-labelledby": "basic-button",
+                  }}
+                >
+                  <MenuItem
+                    style={{ display: "flex", flexDirection: "column" }}
+                    onClick={handleClose}
+                  >
+                    <Text color="#7a7a7a">Notificações</Text>
+
+                    <img src={Mail} alt="Notificações" />
+
+                    <Text color="#7a7a7a">Você não possui Notificações</Text>
+                  </MenuItem>
+                </Menu>
+              </Box>
             </Box>
 
             <Box className={styles.mobileHeadingWrapper}>
@@ -52,7 +96,37 @@ export default function Home() {
               </Text>
             </Box>
 
-            <NotificationsOutlinedIcon />
+            <Box className={styles.dropDown}>
+              <Button
+                id="basic-button"
+                aria-controls={open ? "basic-menu" : undefined}
+                aria-haspopup="true"
+                aria-expanded={open ? "true" : undefined}
+                onClick={handleClick}
+              >
+                <NotificationsOutlinedIcon />
+              </Button>
+              <Menu
+                id="basic-menu"
+                anchorEl={anchorEl}
+                open={open}
+                onClose={handleClose}
+                MenuListProps={{
+                  "aria-labelledby": "basic-button",
+                }}
+              >
+                <MenuItem
+                  style={{ display: "flex", flexDirection: "column" }}
+                  onClick={handleClose}
+                >
+                  <Text color="#7a7a7a">Notificações</Text>
+
+                  <img src={Mail} alt="Notificações" />
+
+                  <Text color="#7a7a7a">Você não possui Notificações</Text>
+                </MenuItem>
+              </Menu>
+            </Box>
           </Box>
 
           <Box className={styles.clientWrapper}>
@@ -102,7 +176,11 @@ export default function Home() {
                     color="#d22697"
                     textDecoration="underline"
                   >
-                    <a href="http://localhost:3000/" rel="noopener noreferrer">
+                    <a
+                      href="https://wa.me/5561983426022?text=Eu+fa%C3%A7o+parte+da+meutudo.+%3A%29"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       Convidar
                     </a>
                   </Text>
@@ -122,7 +200,11 @@ export default function Home() {
                     color="#d22697"
                     textDecoration="underline"
                   >
-                    <a href="http://localhost:3000/" rel="noopener noreferrer">
+                    <a
+                      href="https://wa.me/5561983426022?text=Eu+fa%C3%A7o+parte+da+meutudo.+%3A%29"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       Convidar
                     </a>
                   </Text>
@@ -132,7 +214,11 @@ export default function Home() {
           </Box>
 
           <Box className={styles.helpWrapper}>
-            <a href="http://localhost:3000/" rel="noopener noreferrer">
+            <a
+              href="https://wa.me/5561983426022?text=Eu+fa%C3%A7o+parte+da+meutudo.+%3A%29"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Box>
                 <Text color="#000000" fontWeight={600}>
                   Precisa de ajuda?

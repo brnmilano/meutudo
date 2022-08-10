@@ -77,7 +77,7 @@ export default function Dados() {
         </>
       )}
 
-      <a href="http://localhost:3000/" rel="noopener noreferrer">
+      <a href="/espera" rel="noopener noreferrer">
         <Box>
           <EditOutlinedIcon />
         </Box>

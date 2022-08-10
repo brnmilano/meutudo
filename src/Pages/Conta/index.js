@@ -22,7 +22,7 @@ export default function Conta() {
           <>
             <Box className={styles.topBar}>
               <Box className={styles.backArrow}>
-                <a href="/" rel="noopener noreferrer">
+                <a href="/home" rel="noopener noreferrer">
                   <Box className={styles.arrow}>
                     <KeyboardBackspaceOutlinedIcon />
                   </Box>
@@ -52,7 +52,7 @@ export default function Conta() {
         )}
 
         <Box className={styles.headingWrapper}>
-          <a href="/" rel="noopener noreferrer">
+          <a href="/home" rel="noopener noreferrer">
             <Box className={styles.arrow}>
               <KeyboardBackspaceOutlinedIcon />
             </Box>
