@@ -1,0 +1,11 @@
+.container {
+  display: none;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  box-shadow: 0px 5px 10px #0005;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
+}
