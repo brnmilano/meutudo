@@ -23,7 +23,7 @@ export default function Navigation() {
           setValue(newValue);
         }}
       >
-        <BottomNavigationAction classes={{ selected: styles.active}} component={Link} to="/" value="home" label="Home" icon={<HomeOutlinedIcon />} />
+        <BottomNavigationAction classes={{ selected: styles.active}} component={Link} to="/home" value="home" label="Home" icon={<HomeOutlinedIcon />} />
         <BottomNavigationAction classes={{ selected: styles.active}} component={Link} to="/contratos" value="contratos" label="Contratos" icon={<LibraryBooksOutlinedIcon />} />
         <BottomNavigationAction classes={{ selected: styles.active}} component={Link} to="/duvidas" value="duvidas" label="Dúvidas" icon={<HelpOutlineOutlinedIcon />} />
         <BottomNavigationAction classes={{ selected: styles.active}} component={Link} to="/conta" value="conta" label="Conta" icon={<PersonOutlineOutlinedIcon />} />
