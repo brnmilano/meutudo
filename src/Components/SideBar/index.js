@@ -7,7 +7,6 @@ import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import Text from "../Text";
 import Button from "@mui/material/Button";
-import { Link } from "react-router-dom";
 
 export default function SideBar() {
   return (
@@ -20,25 +19,26 @@ export default function SideBar() {
         <Box className={styles.menuWrapper}>
           <Box className={styles.menuItems}>
             <HomeOutlinedIcon />
-            <Link to="contratos">
-              <Text fontWeight={500} fontSize={14} color="#000000">
+
+            <a href="/" rel="noopener noreferrer">
+              <Text fontWeight={500} fontSize={14}>
                 Home
               </Text>
-            </Link>
+            </a>         
           </Box>
 
           <Box className={styles.menuItems}>
             <LibraryBooksOutlinedIcon />
-            <a href="http://localhost:3000/" rel="noopener noreferrer">
+            <a href="/contratos" rel="noopener noreferrer">
               <Text fontWeight={500} fontSize={14}>
-                Contatos
+                Contratos
               </Text>
             </a>
           </Box>
 
           <Box className={styles.menuItems}>
             <HelpOutlineOutlinedIcon />
-            <a href="http://localhost:3000/" rel="noopener noreferrer">
+            <a href="/duvidas" rel="noopener noreferrer">
               <Text fontWeight={500} fontSize={14}>
                 Dúvidas
               </Text>
@@ -47,7 +47,7 @@ export default function SideBar() {
 
           <Box className={styles.menuItems}>
             <PersonOutlineOutlinedIcon />
-            <a href="http://localhost:3000/" rel="noopener noreferrer">
+            <a href="/conta" rel="noopener noreferrer">
               <Text fontWeight={500} fontSize={14}>
                 Conta
               </Text>
