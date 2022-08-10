@@ -17,7 +17,7 @@ export default function MoreInfos() {
         </Box>
 
         <Box className={styles.contentWrapper}>
-          <a href="#espera" rel="noopener noreferrer">
+          <a href="/espera" rel="noopener noreferrer">
             <Text fontWeight={300} fontSize={16} color="#000000">
               Editar endereço
             </Text>
@@ -27,7 +27,7 @@ export default function MoreInfos() {
             </Box>
           </a>
 
-          <a href="http://localhost:3000/" rel="noopener noreferrer">
+          <a href="/espera" rel="noopener noreferrer">
             <Text fontWeight={300} fontSize={16} color="#000000">
               Dados Bancários
             </Text>
@@ -46,7 +46,7 @@ export default function MoreInfos() {
         </Box>
 
         <Box className={styles.contentWrapper}>
-          <a href="http://localhost:3000/" rel="noopener noreferrer">
+          <a href="/espera" rel="noopener noreferrer">
             <Text fontWeight={300} fontSize={16} color="#000000">
               Alterar senha
             </Text>
@@ -65,7 +65,7 @@ export default function MoreInfos() {
         </Box>
 
         <Box className={styles.contentWrapper}>
-          <a href="http://localhost:3000/" rel="noopener noreferrer">
+          <a href="/espera" rel="noopener noreferrer">
             <Text fontWeight={300} fontSize={16} color="#000000">
               Política de privacidade
             </Text>
@@ -75,7 +75,7 @@ export default function MoreInfos() {
             </Box>
           </a>
 
-          <a href="http://localhost:3000/" rel="noopener noreferrer">
+          <a href="/espera" rel="noopener noreferrer">
             <Text fontWeight={300} fontSize={16} color="#000000">
               Termos de uso
             </Text>

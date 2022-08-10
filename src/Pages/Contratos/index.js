@@ -8,6 +8,10 @@ import Heading from "../../Components/Heading";
 import styles from "./styles.module.scss";
 import Container from "../../Components/Container";
 import Notification from "./Assets/notification.png";
+import SideBar from "../../Components/SideBar";
+import KeyboardBackspaceOutlinedIcon from "@mui/icons-material/KeyboardBackspaceOutlined";
+import Navigation from "../../Components/BottomNavigation";
+import useIsMobile from "../../helpers/useIsMobile";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -49,10 +53,36 @@ export default function Contratos() {
     setValue(newValue);
   };
 
+  const isMobile = useIsMobile({ size: 768 });
+
   return (
     <Box className={styles.container}>
       <Container>
+        {isMobile ? (
+          <Box className={styles.topBar}>
+            <Box className={styles.backArrow}>
+              <a href="/" rel="noopener noreferrer">
+                <Box className={styles.arrow}>
+                  <KeyboardBackspaceOutlinedIcon />
+                </Box>
+              </a>
+            </Box>
+
+            <Heading fontSize={20} fontWeight={600} color="#ffffff">
+              Contratos
+            </Heading>
+          </Box>
+        ) : (
+          <SideBar />
+        )}
+
         <Box className={styles.headingWrapper}>
+          <a href="/" rel="noopener noreferrer">
+            <Box className={styles.arrow}>
+              <KeyboardBackspaceOutlinedIcon />
+            </Box>
+          </a>
+
           <Heading fontSize={20} fontWeight={600}>
             Contratos
           </Heading>
@@ -60,6 +90,7 @@ export default function Contratos() {
 
         <Box className={styles.border}>
           <Tabs
+            classes={{ indicator: styles.tabsBorder }}
             value={value}
             onChange={handleChange}
             aria-label="basic tabs example"
@@ -86,6 +117,8 @@ export default function Contratos() {
             </Box>
           </TabPanel>
         </Box>
+
+        {isMobile ? <Navigation /> : ""}
       </Container>
     </Box>
   );

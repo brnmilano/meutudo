@@ -1,12 +1,70 @@
 .container {
     display: flex;
 
+    .topBar {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #000000;
+        color: #ffffff;
+        min-height: 55px;
+        padding: 0 20px;
+        z-index: 9;
+
+        .backArrow {
+            position: absolute;
+            left: 0;
+        }
+
+        .arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 16px;
+        }
+    }
+
+    .clientNameMobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #000000;
+        border-radius: 0px 0px 30px 0px;
+        padding: 60px 20px 30px 20px;
+        margin-bottom: 20px;
+
+        .perfilImage {
+            position: relative;
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-bottom: 20px;
+
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+
     .headingWrapper {
         display: flex;
         max-width: 415px;
         min-height: 76px;
         align-items: center;
         justify-content: space-between;
+
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
 
         .arrow {
             display: flex;
@@ -30,6 +88,10 @@
             border-radius: 20px;
             padding: 30px 20px;
             margin-bottom: 20px;
+
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
 
             .perfilImage {
                 position: relative;

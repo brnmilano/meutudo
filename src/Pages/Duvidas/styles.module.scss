@@ -1,9 +1,49 @@
 .container {
     padding-top: 20px;
+    position: relative;
+
+    .topBar {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #000000;
+        color: #ffffff;
+        min-height: 55px;
+        padding: 0 20px;
+
+        .backArrow {
+            position: absolute;
+            left: 0;
+        }
+
+        .arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 16px;
+        }
+    }
 
     .headingWrapper {
         display: flex;
-        justify-content: center;
+        max-width: 415px;
+        min-height: 35px;
+        align-items: center;
+        justify-content: space-between;
+
+        .arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 16px;
+
+            svg {
+                color: #d83c95;
+            }
+        }
     }
 
     .doubtWrapper {

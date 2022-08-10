@@ -10,11 +10,37 @@ import Help from "./Assets/help.png";
 import ErrorImage from "./Assets/error-image.png";
 import Forward from "./Assets/forward.svg";
 import Doubt from "./Assets/doubt.svg";
+import SideBar from "../../Components/SideBar";
+import Navigation from "../../Components/BottomNavigation";
+import useIsMobile from "../../helpers/useIsMobile";
 
 export default function Home() {
+  const isMobile = useIsMobile({ size: 768 });
+
   return (
     <Box className={styles.container}>
       <Container>
+        {isMobile ? (
+          <>
+            <Box className={styles.topBar}>
+              <NotificationsOutlinedIcon />
+            </Box>
+
+            <Box className={styles.mobileHeadingWrapper}>
+              <Box>
+                <Heading fontWeight={700} fontSize={22} color="#FFFFFF">
+                  Olá, Bruno
+                </Heading>
+                <Text fontSize={14} color="#FFFFFF">
+                  Como podemos te ajudar hoje?
+                </Text>
+              </Box>
+            </Box>
+          </>
+        ) : (
+          <SideBar />
+        )}
+
         <Box className={styles.contentWrapper}>
           <Box className={styles.headingWrapper}>
             <Box>
@@ -119,6 +145,8 @@ export default function Home() {
             </a>
           </Box>
         </Box>
+
+        {isMobile ? <Navigation /> : ""}
       </Container>
     </Box>
   );
