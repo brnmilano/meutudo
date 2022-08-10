@@ -10,12 +10,14 @@ import Contratos from "./Pages/Contratos";
 import Duvidas from "./Pages/Duvidas";
 import Home from "./Pages/Home";
 import Espera from "./Pages/Espera"
+import BemVindo from "./Pages/BemVindo";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" index element={<Home />} />
+        <Route path="/" index element={<BemVindo />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/contratos" element={<Contratos />} />
         <Route path="/duvidas" element={<Duvidas />} />
         <Route path="/conta" element={<Conta />} />
