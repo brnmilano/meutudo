@@ -1,19 +1,27 @@
-import useIsMobile from "./helpers/useIsMobile";
-import { Box } from "@mui/system";
-import TopBar from "./Components/TopBar";
-import SideBar from "./Components/SideBar";
-import Pages from "./Pages";
-import Rotas from "./routes";
+import React from "react";
+import {
+  Route,
+  BrowserRouter,
+  Routes
+} from "react-router-dom";
+
+import Conta from "./Pages/Conta";
+import Contratos from "./Pages/Contratos";
+import Duvidas from "./Pages/Duvidas";
+import Home from "./Pages/Home";
+import Espera from "./Pages/Espera"
 
 function App() {
-  const isMobile = useIsMobile({ size: 768 });
-
   return (
-    <>
-      <Box>{isMobile ? <TopBar /> : <SideBar />}</Box>
-
-      <Rotas />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" index element={<Home />} />
+        <Route path="/contratos" element={<Contratos />} />
+        <Route path="/duvidas" element={<Duvidas />} />
+        <Route path="/conta" element={<Conta />} />
+        <Route path="/espera" element={<Espera />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
