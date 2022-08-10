@@ -20,7 +20,7 @@ export default function SideBar() {
           <Box className={styles.menuItems}>
             <HomeOutlinedIcon />
 
-            <a href="/" rel="noopener noreferrer">
+            <a href="/home" rel="noopener noreferrer">
               <Text fontWeight={500} fontSize={14}>
                 Home
               </Text>
