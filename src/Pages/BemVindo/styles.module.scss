@@ -8,15 +8,9 @@
   background-color: black;
 
   .logoImage {
-    height: 200px;
     width: 200px;
     margin-left: 22px;
     margin: 0 auto;
-
-    @media screen and (max-width: 768px) {
-      height: 140px;
-      width: 140px;
-    }
 }
 
   svg {

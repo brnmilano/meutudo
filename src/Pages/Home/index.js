@@ -18,6 +18,7 @@ import SideBar from "../../Components/SideBar";
 import Navigation from "../../Components/BottomNavigation";
 import useIsMobile from "../../helpers/useIsMobile";
 import Mail from "./Assets/mail.png";
+import useAuth from "../../Contexts/useAuth"
 
 export default function Home() {
   const isMobile = useIsMobile({ size: 768 });
@@ -30,6 +31,8 @@ export default function Home() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  const { nome } = useAuth();
 
   return (
     <Box className={styles.container}>
@@ -73,7 +76,7 @@ export default function Home() {
             <Box className={styles.mobileHeadingWrapper}>
               <Box>
                 <Heading fontWeight={700} fontSize={22} color="#FFFFFF">
-                  Olá, Bruno
+                  Olá, {nome}
                 </Heading>
                 <Text fontSize={14} color="#FFFFFF">
                   Como podemos te ajudar hoje?
@@ -89,7 +92,7 @@ export default function Home() {
           <Box className={styles.headingWrapper}>
             <Box>
               <Heading fontWeight={700} fontSize={22}>
-                Olá, Bruno
+                Olá, {nome}
               </Heading>
               <Text fontSize={14} color="#414141">
                 Como podemos te ajudar hoje?

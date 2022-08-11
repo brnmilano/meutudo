@@ -11,9 +11,14 @@ import MoreInfos from "./MoreInfos";
 import SideBar from "../../Components/SideBar";
 import Navigation from "../../Components/BottomNavigation";
 import useIsMobile from "../../helpers/useIsMobile";
+import useAuth from "../../Contexts/useAuth"
 
 export default function Conta() {
   const isMobile = useIsMobile({ size: 768 });
+
+  const { cpf } = useAuth();
+
+  console.log(cpf);
 
   return (
     <Box className={styles.container}>
@@ -43,7 +48,7 @@ export default function Conta() {
                 Bruno Oliveira Milano
               </Text>
               <Text fontSize={14} color="#ffffff">
-                000.000.000-00
+                {cpf}
               </Text>
             </Box>
           </>
@@ -75,7 +80,7 @@ export default function Conta() {
                   Bruno Oliveira Milano
                 </Text>
                 <Text fontSize={14} color="#ffffff">
-                  000.000.000-00
+                  {cpf}
                 </Text>
               </Box>
 
