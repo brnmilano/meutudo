@@ -72,7 +72,7 @@ export default function Duvidas() {
               </Box>
             </a>
 
-            <a href="http://localhost:3000/" rel="noopener noreferrer">
+            <a href="/espera" rel="noopener noreferrer">
               <Text fontSize={14} fontWeight={700} color="#000000">
                 Resolver minhas pendências
               </Text>
@@ -82,7 +82,7 @@ export default function Duvidas() {
               </Box>
             </a>
 
-            <a href="http://localhost:3000/" rel="noopener noreferrer">
+            <a href="/espera" rel="noopener noreferrer">
               <Text fontSize={14} fontWeight={700} color="#000000">
                 Outras dúvidas
               </Text>
