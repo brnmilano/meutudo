@@ -1,0 +1,81 @@
+.container {
+  padding-top: 20px;
+  position: relative;
+  background-color: #ececec;
+  height: 100vh;
+
+  .topBar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    color: #ffffff;
+    min-height: 55px;
+    padding: 0 20px;
+
+    .backArrow {
+      position: absolute;
+      left: 0;
+    }
+
+    .arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 16px;
+    }
+  }
+
+  .headingWrapper {
+    display: flex;
+    max-width: 415px;
+    min-height: 35px;
+    align-items: center;
+    justify-content: space-between;
+
+    .arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 16px;
+
+      svg {
+        color: #d83c95;
+      }
+    }
+  }
+
+  .valoresWrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+
+    &:last-child {
+      margin-bottom: 20px;
+    }
+
+    .oportunidadesCard {
+      background-color: #ffffff;
+      max-width: 160px;
+      width: 100%;
+      padding: 12px 10px;
+      margin-right: 15px;
+      border-radius: 10px;
+      text-align: center;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .buttonWrapper {
+    max-width: 150px;
+    margin: 0 auto;
+    line-height: 22px;
+    margin-top: 20px;   
+  }
+}
