@@ -90,13 +90,13 @@ export default function Contratos() {
 
         <Box className={styles.border}>
           <Tabs
-            classes={{ indicator: styles.tabsBorder }}
+            classes={{ indicator: styles.tabsBorder, root: styles.tabsRoot }}
             value={value}
             onChange={handleChange}
             aria-label="basic tabs example"
           >
-            <Tab label="Em andamento" {...a11yProps(0)} />
-            <Tab label="Finalizado" {...a11yProps(1)} />
+            <Tab classes={{ root: styles.testeTabs }} label="Em andamento" {...a11yProps(0)} />
+            <Tab classes={{ root: styles.testeTabs }} label="Finalizado" {...a11yProps(1)} />
           </Tabs>
         </Box>
 

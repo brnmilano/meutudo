@@ -13,7 +13,6 @@
     color: #ffffff;
     min-height: 55px;
     padding: 0 20px;
-    
 
     .backArrow {
       position: absolute;
@@ -52,20 +51,18 @@
       background-color: #d83c95;
     }
 
-    > div {
-      div {
+    .tabsRoot {
+      > div {
         div {
-          button {
-            width: 100%;
-            font-weight: 700;
-            color: #000000 !important;
-
-            &:active,
-            :focus {
-              color: #d22688 !important;
-            }
-          }
+          display: flex;
+          justify-content: space-around;
         }
+      }
+
+      .testeTabs {
+        width: 50%;
+        font-weight: 700;
+        color: #000000 !important;
       }
     }
   }
