@@ -65,10 +65,14 @@
             }
         }
         .buttonLogout {
+            display: flex;
+
             a {
                 text-decoration: none;
                 text-transform: none;
                 color: #d22688;
+                max-width: 200px;
+                margin: 0 auto;
             }
         }
     }
