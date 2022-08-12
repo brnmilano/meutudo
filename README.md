@@ -26,5 +26,5 @@ yarn start
 Para visualizar o site em produção e mobile em seu celular, acesse:
 
 ```sh
-https://meutudo.vercel.app/
+[Demo](https://meutudo.vercel.app/).
 ```
