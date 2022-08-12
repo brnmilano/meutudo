@@ -28,13 +28,9 @@ export default function Periodo() {
         "https://5fpaprjjbl.execute-api.us-east-1.amazonaws.com/test/installments"
       )
       .then((response) => {
-        console.log({ response });
         setPeriodo(response.data);
       })
-      .catch((error) => {
-        console.log(error, "oi 2");
-        // alterar o conteudo do console log
-      });
+      .catch((error) => {});
   }
 
   return (
@@ -43,11 +39,11 @@ export default function Periodo() {
         {isMobile ? (
           <Box className={styles.topBar}>
             <Box className={styles.backArrow}>
-              <a href="/oportunidades/valores" rel="noopener noreferrer">
+              <Link to="/oportunidades/valores">
                 <Box className={styles.arrow}>
                   <KeyboardBackspaceOutlinedIcon />
                 </Box>
-              </a>
+              </Link>
             </Box>
 
             <Heading fontSize={20} fontWeight={600} color="#ffffff">
@@ -80,25 +76,23 @@ export default function Periodo() {
           {periodo?.suggestionInstallments.map(
             (suggestionInstallment, index) => {
               return (
-                <Box className={styles.teste}>
-                  <Button
-                    color="#000000"
-                    fontWeight={400}
-                    borderRadius={10}
-                    padding={10}
-                    onClick={getValores}
-                    key={`${index} ${suggestionInstallment}`}
-                    className={styles.oportunidadesCard}
-                  >
-                    {suggestionInstallment}
-                  </Button>
-                </Box>
+                <Button
+                  color="#000000"
+                  fontWeight={400}
+                  borderRadius={10}
+                  padding={10}
+                  onClick={getValores}
+                  key={`${index} ${suggestionInstallment}`}
+                  className={styles.oportunidadesCard}
+                >
+                  {suggestionInstallment}
+                </Button>
               );
             }
           )}
         </Box>
 
-        <Box display="flex" justifyContent="center">
+        <Box className={styles.periodWrapper}>
           <Input type="number" name="Telefone" placeholder="00" required />
           <Text>meses</Text>
         </Box>
@@ -111,7 +105,7 @@ export default function Periodo() {
           </Link>
         </Box>
 
-        {isMobile ? <Navigation /> : ""}
+        {isMobile && <Navigation />}
       </Container>
     </Box>
   );

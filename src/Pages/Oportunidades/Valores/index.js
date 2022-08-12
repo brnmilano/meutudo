@@ -26,12 +26,9 @@ export default function Valores() {
     axios
       .get("https://5fpaprjjbl.execute-api.us-east-1.amazonaws.com/test/values")
       .then((response) => {
-        console.log({ response });
         setValores(response.data);
       })
-      .catch((error) => {
-        console.log(error, "oi 2");
-      });
+      .catch((error) => {});
   }
 
   const formatter = new Intl.NumberFormat("pt-BR", {
@@ -45,11 +42,11 @@ export default function Valores() {
         {isMobile ? (
           <Box className={styles.topBar}>
             <Box className={styles.backArrow}>
-              <a href="/oportunidades" rel="noopener noreferrer">
+              <Link to="/oportunidades">
                 <Box className={styles.arrow}>
                   <KeyboardBackspaceOutlinedIcon />
                 </Box>
-              </a>
+              </Link>
             </Box>
 
             <Heading fontSize={20} fontWeight={600} color="#ffffff">
@@ -81,14 +78,17 @@ export default function Valores() {
         <Box className={styles.valoresWrapper}>
           {valores?.suggestionValues.map((suggestionValue, index) => {
             return (
-              <Box
+              <Button
                 key={`${index} ${suggestionValue}`}
                 className={styles.oportunidadesCard}
+                borderRadius={10}
+                padding={10}
+                color="#000000"
+                fontWeight={400}
+                onClick={getValores}
               >
-                <Button color="#000000" fontWeight={400} onClick={getValores}>
-                  {formatter.format(suggestionValue)}
-                </Button>
-              </Box>
+                {formatter.format(suggestionValue)}
+              </Button>
             );
           })}
         </Box>
@@ -96,7 +96,11 @@ export default function Valores() {
         <Box className={styles.moreValuesWrapper}>
           <Text>Outro valor</Text>
 
-          <NumberFormat placeholder="R$ 00,00" thousandSeparator={true} prefix={"R$"} />
+          <NumberFormat
+            placeholder="R$ 00,00"
+            thousandSeparator={true}
+            prefix={"R$"}
+          />
         </Box>
 
         <Box className={styles.buttonWrapper}>
@@ -107,7 +111,7 @@ export default function Valores() {
           </Link>
         </Box>
 
-        {isMobile ? <Navigation /> : ""}
+        {isMobile && <Navigation />}
       </Container>
     </Box>
   );

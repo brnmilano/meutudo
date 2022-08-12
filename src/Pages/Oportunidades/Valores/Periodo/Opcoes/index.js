@@ -28,13 +28,9 @@ export default function Opcoes() {
         "https://5fpaprjjbl.execute-api.us-east-1.amazonaws.com/test/simulation"
       )
       .then((response) => {
-        console.log({ response });
         setOpcoes(response.data);
       })
-      .catch((error) => {
-        console.log(error, "oi 2");
-        // alterar o conteudo do console log
-      });
+      .catch((error) => {});
   }
 
   const formatter = new Intl.NumberFormat("pt-BR", {
@@ -141,7 +137,7 @@ export default function Opcoes() {
           </Box>
         </Box>
 
-        {isMobile ? <Navigation /> : ""}
+        {isMobile && <Navigation />}
       </Container>
     </Box>
   );

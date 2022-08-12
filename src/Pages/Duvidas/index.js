@@ -15,7 +15,6 @@ export default function Duvidas() {
 
   return (
     <Box className={styles.container}>
-      {/* <a href="tel:+55{$_configuracao->telefone_setor_operacoes|regex_replace:'/[^0-9]+/':''}"> */}
       <Container>
       {isMobile ? (
           <Box className={styles.topBar}>
@@ -53,7 +52,7 @@ export default function Duvidas() {
           </Text>
 
           <Box className={styles.contentWrapper}>
-            <a href="/contratos" rel="noopener noreferrer">
+            <Link to="/contrato">
               <Text fontSize={14} fontWeight={700} color="#000000">
                 Andamento do meu contrato
               </Text>
@@ -61,9 +60,9 @@ export default function Duvidas() {
               <Box className={styles.arrow}>
                 <KeyboardArrowRightOutlinedIcon />
               </Box>
-            </a>
+            </Link>
 
-            <a href="/oportunidades" rel="noopener noreferrer">
+            <Link to="/oportunidades">
               <Text fontSize={14} fontWeight={700} color="#000000">
                 Minhas oportunidades
               </Text>
@@ -71,9 +70,9 @@ export default function Duvidas() {
               <Box className={styles.arrow}>
                 <KeyboardArrowRightOutlinedIcon />
               </Box>
-            </a>
+            </Link>
 
-            <a href="/espera" rel="noopener noreferrer">
+            <Link to="/espera">
               <Text fontSize={14} fontWeight={700} color="#000000">
                 Resolver minhas pendências
               </Text>
@@ -81,9 +80,9 @@ export default function Duvidas() {
               <Box className={styles.arrow}>
                 <KeyboardArrowRightOutlinedIcon />
               </Box>
-            </a>
+            </Link>
 
-            <a href="/espera" rel="noopener noreferrer">
+            <Link to="/espera">
               <Text fontSize={14} fontWeight={700} color="#000000">
                 Outras dúvidas
               </Text>
@@ -91,7 +90,7 @@ export default function Duvidas() {
               <Box className={styles.arrow}>
                 <KeyboardArrowRightOutlinedIcon />
               </Box>
-            </a>
+            </Link>
           </Box>
         </Box>
 

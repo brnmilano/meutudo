@@ -3,7 +3,6 @@ import Box from "@mui/material/Box";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
 import Typography from "@mui/material/Typography";
-import PropTypes from "prop-types";
 import * as React from "react";
 import { Link } from 'react-router-dom';
 import Navigation from "../../Components/BottomNavigation";
@@ -34,12 +33,6 @@ function TabPanel(props) {
   );
 }
 
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.number.isRequired,
-  value: PropTypes.number.isRequired,
-};
-
 function a11yProps(index) {
   return {
     id: `simple-tab-${index}`,
@@ -49,12 +42,11 @@ function a11yProps(index) {
 
 export default function Contratos() {
   const [value, setValue] = React.useState(0);
+  const isMobile = useIsMobile({ size: 768 });
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-
-  const isMobile = useIsMobile({ size: 768 });
 
   return (
     <Box className={styles.container}>
@@ -62,7 +54,7 @@ export default function Contratos() {
         {isMobile ? (
           <Box className={styles.topBar}>
             <Box className={styles.backArrow}>
-              <Link tp="/home">
+              <Link to="/home">
                 <Box className={styles.arrow}>
                   <KeyboardBackspaceOutlinedIcon />
                 </Box>
@@ -78,7 +70,7 @@ export default function Contratos() {
         )}
 
         <Box className={styles.headingWrapper}>
-          <Link tp="/home">
+          <Link to="/home">
             <Box className={styles.arrow}>
               <KeyboardBackspaceOutlinedIcon />
             </Box>
@@ -119,7 +111,7 @@ export default function Contratos() {
           </TabPanel>
         </Box>
 
-        {isMobile ? <Navigation /> : ""}
+        {isMobile && <Navigation />}
       </Container>
     </Box>
   );

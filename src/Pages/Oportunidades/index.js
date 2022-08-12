@@ -28,12 +28,9 @@ function Oportunidades() {
     axios
       .get("https://5fpaprjjbl.execute-api.us-east-1.amazonaws.com/test")
       .then((response) => {
-        console.log({ response });
         setOportunidades(response.data);
       })
-      .catch((error) => {
-        console.log(error, "Teste de erro");
-      });
+      .catch((error) => {});
   }
 
   const formatter = new Intl.NumberFormat("pt-BR", {
@@ -47,11 +44,11 @@ function Oportunidades() {
         {isMobile ? (
           <Box className={styles.topBar}>
             <Box className={styles.backArrow}>
-              <a href="/home" rel="noopener noreferrer">
+              <Link to="/home">
                 <Box className={styles.arrow}>
                   <KeyboardBackspaceOutlinedIcon />
                 </Box>
-              </a>
+              </Link>
             </Box>
 
             <Heading fontSize={20} fontWeight={600} color="#ffffff">
@@ -63,11 +60,11 @@ function Oportunidades() {
         )}
 
         <Box className={styles.headingWrapper}>
-          <a href="/home" rel="noopener noreferrer">
+          <Link to="/home">
             <Box className={styles.arrow}>
               <KeyboardBackspaceOutlinedIcon />
             </Box>
-          </a>
+          </Link>
 
           <Heading fontSize={20} fontWeight={600}>
             Oportunidades
@@ -120,7 +117,7 @@ function Oportunidades() {
           </Box>
         </Box>
 
-        {isMobile ? <Navigation /> : ""}
+        {isMobile && <Navigation />}
       </Container>
     </Box>
   );

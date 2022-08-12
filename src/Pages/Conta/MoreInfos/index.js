@@ -3,6 +3,7 @@ import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import KeyboardArrowRightOutlinedIcon from "@mui/icons-material/KeyboardArrowRightOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import Box from "@mui/material/Box";
+import { Link } from "react-router-dom";
 import Heading from "../../../Components/Heading";
 import Text from "../../../Components/Text";
 import styles from "./styles.module.scss";
@@ -17,7 +18,7 @@ export default function MoreInfos() {
         </Box>
 
         <Box className={styles.contentWrapper}>
-          <a href="/espera" rel="noopener noreferrer">
+          <Link to="/espera">
             <Text fontWeight={300} fontSize={16} color="#000000">
               Editar endereço
             </Text>
@@ -25,9 +26,9 @@ export default function MoreInfos() {
             <Box className={styles.arrow}>
               <KeyboardArrowRightOutlinedIcon />
             </Box>
-          </a>
+          </Link>
 
-          <a href="/espera" rel="noopener noreferrer">
+          <Link to="/espera">
             <Text fontWeight={300} fontSize={16} color="#000000">
               Dados Bancários
             </Text>
@@ -35,7 +36,7 @@ export default function MoreInfos() {
             <Box className={styles.arrow}>
               <KeyboardArrowRightOutlinedIcon />
             </Box>
-          </a>
+          </Link>
         </Box>
       </Box>
 
@@ -46,7 +47,7 @@ export default function MoreInfos() {
         </Box>
 
         <Box className={styles.contentWrapper}>
-          <a href="/espera" rel="noopener noreferrer">
+          <Link to="/espera">
             <Text fontWeight={300} fontSize={16} color="#000000">
               Alterar senha
             </Text>
@@ -54,7 +55,7 @@ export default function MoreInfos() {
             <Box className={styles.arrow}>
               <KeyboardArrowRightOutlinedIcon />
             </Box>
-          </a>
+          </Link>
         </Box>
       </Box>
 
@@ -65,7 +66,7 @@ export default function MoreInfos() {
         </Box>
 
         <Box className={styles.contentWrapper}>
-          <a href="/espera" rel="noopener noreferrer">
+          <Link to="/espera">
             <Text fontWeight={300} fontSize={16} color="#000000">
               Política de privacidade
             </Text>
@@ -73,9 +74,9 @@ export default function MoreInfos() {
             <Box className={styles.arrow}>
               <KeyboardArrowRightOutlinedIcon />
             </Box>
-          </a>
+          </Link>
 
-          <a href="/espera" rel="noopener noreferrer">
+          <Link to="/espera">
             <Text fontWeight={300} fontSize={16} color="#000000">
               Termos de uso
             </Text>
@@ -83,7 +84,7 @@ export default function MoreInfos() {
             <Box className={styles.arrow}>
               <KeyboardArrowRightOutlinedIcon />
             </Box>
-          </a>
+          </Link>
         </Box>
       </Box>
     </Box>

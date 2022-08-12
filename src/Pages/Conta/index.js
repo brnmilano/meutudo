@@ -1,6 +1,7 @@
 import KeyboardBackspaceOutlinedIcon from "@mui/icons-material/KeyboardBackspaceOutlined";
 import { Grid } from "@mui/material";
 import Box from "@mui/material/Box";
+import { Link } from "react-router-dom";
 import Navigation from "../../Components/BottomNavigation";
 import Container from "../../Components/Container";
 import Heading from "../../Components/Heading";
@@ -15,10 +16,7 @@ import styles from "./styles.module.scss";
 
 export default function Conta() {
   const isMobile = useIsMobile({ size: 768 });
-
   const { cpf } = useAuth();
-
-  console.log(cpf);
 
   return (
     <Box className={styles.container}>
@@ -27,11 +25,11 @@ export default function Conta() {
           <>
             <Box className={styles.topBar}>
               <Box className={styles.backArrow}>
-                <a href="/home" rel="noopener noreferrer">
+                <Link to="/home">
                   <Box className={styles.arrow}>
                     <KeyboardBackspaceOutlinedIcon />
                   </Box>
-                </a>
+                </Link>
               </Box>
 
               <Heading fontSize={20} fontWeight={600} color="#ffffff">
@@ -57,11 +55,11 @@ export default function Conta() {
         )}
 
         <Box className={styles.headingWrapper}>
-          <a href="/home" rel="noopener noreferrer">
+          <Link to="/home">
             <Box className={styles.arrow}>
               <KeyboardBackspaceOutlinedIcon />
             </Box>
-          </a>
+          </Link>
 
           <Heading fontSize={20} fontWeight={600}>
             Conta

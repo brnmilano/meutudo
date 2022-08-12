@@ -21,7 +21,7 @@ export default function SideBar() {
           <Box className={styles.menuItems}>
             <HomeOutlinedIcon />
 
-            <Link to="/home" rel="noopener noreferrer">
+            <Link to="/home">
               <Text fontWeight={500} fontSize={14}>
                 Home
               </Text>
@@ -30,7 +30,8 @@ export default function SideBar() {
 
           <Box className={styles.menuItems}>
             <LibraryBooksOutlinedIcon />
-            <Link to="/contratos" rel="noopener noreferrer">
+
+            <Link to="/contratos">
               <Text fontWeight={500} fontSize={14}>
                 Contratos
               </Text>
@@ -39,7 +40,8 @@ export default function SideBar() {
 
           <Box className={styles.menuItems}>
             <HelpOutlineOutlinedIcon />
-            <Link to="/duvidas" rel="noopener noreferrer">
+
+            <Link to="/duvidas">
               <Text fontWeight={500} fontSize={14}>
                 Dúvidas
               </Text>
@@ -48,7 +50,8 @@ export default function SideBar() {
 
           <Box className={styles.menuItems}>
             <PersonOutlineOutlinedIcon />
-            <Link to="/conta" rel="noopener noreferrer">
+
+            <Link to="/conta">
               <Text fontWeight={500} fontSize={14}>
                 Conta
               </Text>

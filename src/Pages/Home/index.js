@@ -23,6 +23,7 @@ import styles from "./styles.module.scss";
 
 export default function Home() {
   const isMobile = useIsMobile({ size: 768 });
+  const { nome } = useAuth();
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -32,8 +33,6 @@ export default function Home() {
   const handleClose = () => {
     setAnchorEl(null);
   };
-
-  const { nome } = useAuth();
 
   return (
     <Box className={styles.container}>
@@ -88,7 +87,6 @@ export default function Home() {
         ) : (
           <SideBar />
         )}
-
         <Box className={styles.contentWrapper}>
           <Box className={styles.headingWrapper}>
             <Box>
@@ -110,7 +108,7 @@ export default function Home() {
               >
                 <NotificationsOutlinedIcon />
               </Button>
-              
+
               <Menu
                 id="basic-menu"
                 anchorEl={anchorEl}
@@ -150,9 +148,7 @@ export default function Home() {
               alt="Logo meutudo"
             />
 
-            <Link to="/oportunidades">
-              Clique e veja suas oportunidades :)
-            </Link>
+            <Link to="/oportunidades">Clique e veja suas oportunidades :)</Link>
           </Box>
 
           <Box className={styles.newWrapper}>
@@ -236,8 +232,8 @@ export default function Home() {
             </a>
           </Box>
         </Box>
-
-        {isMobile ? <Navigation /> : ""}
+        
+        {isMobile && <Navigation />}
       </Container>
     </Box>
   );
