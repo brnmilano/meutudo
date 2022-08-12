@@ -25,9 +25,9 @@ function App() {
           <Route path="/conta" element={<Conta />} />
           <Route path="/espera" element={<Espera />} />
           <Route path="/oportunidades" element={<Oportunidades />} />
-          <Route path="/valores" element={<Valores />} />
-          <Route path="/periodo" element={<Periodo />} />
-          <Route path="/opcoes" element={<Opcoes />} />
+          <Route path="/oportunidades/valores" element={<Valores />} />
+          <Route path="/oportunidades/valores/periodo" element={<Periodo />} />
+          <Route path="/oportunidades/valores/periodo/opcoes" element={<Opcoes />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>
