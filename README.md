@@ -9,8 +9,8 @@
 
 ```
     cd meutudo
-
-    // Instalar dependencias
+    
+    Instalar dependencias:
     yarn 
 ```
 
@@ -19,5 +19,5 @@
 Inicia o desenvolvimento com atualização em tempo real no navegador
 
 ```sh
-yarn
+yarn start 
 ```
