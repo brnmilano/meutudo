@@ -48,13 +48,24 @@
     }
   }
 
+  .choiceWrapper {
+    text-align: center;
+    padding: 20px 0;
+
+    @media screen and (max-width: 640px) {
+      text-align: left;
+      padding-left: 20px;
+    }
+  }
+
   .valoresWrapper {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     margin-top: 15px;
 
-    &:last-child {
-      margin-bottom: 20px;
+    @media screen and (max-width: 640px) {
+      flex-direction: column;
+      align-items: center;
     }
 
     .oportunidadesCard {
@@ -67,6 +78,11 @@
       text-align: center;
 
       &:last-child {
+        margin-right: 0;
+      }
+
+      @media screen and (max-width: 640px) {
+        margin-bottom: 15px;
         margin-right: 0;
       }
     }

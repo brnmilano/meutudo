@@ -10,16 +10,40 @@ import Text from "../../../../Components/Text";
 import Input from "../../../../Components/Input";
 import Button from "../../../../Components/Button";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function Periodo() {
   const isMobile = useIsMobile({ size: 768 });
+
+  const [periodo, setPeriodo] = useState();
+
+  useEffect(() => {
+    getValores();
+  }, []);
+
+  function getValores() {
+    axios
+      .get(
+        "https://5fpaprjjbl.execute-api.us-east-1.amazonaws.com/test/installments"
+      )
+      .then((response) => {
+        console.log({ response });
+        setPeriodo(response.data);
+      })
+      .catch((error) => {
+        console.log(error, "oi 2");
+        // alterar o conteudo do console log
+      });
+  }
+
   return (
     <Box className={styles.container}>
       <Container>
         {isMobile ? (
           <Box className={styles.topBar}>
             <Box className={styles.backArrow}>
-              <a href="/home" rel="noopener noreferrer">
+              <a href="/oportunidades/valores" rel="noopener noreferrer">
                 <Box className={styles.arrow}>
                   <KeyboardBackspaceOutlinedIcon />
                 </Box>
@@ -35,7 +59,7 @@ export default function Periodo() {
         )}
 
         <Box className={styles.headingWrapper}>
-          <Link to="/oportunidades">
+          <Link to="/oportunidades/valores">
             <Box className={styles.arrow}>
               <KeyboardBackspaceOutlinedIcon />
             </Box>
@@ -46,26 +70,32 @@ export default function Periodo() {
           </Heading>
         </Box>
 
-        <Text>Em quanto tempo você quer pagar?</Text>
-
-        <Box className={styles.valoresWrapper}>
-          <Box className={styles.oportunidadesCard}>
-            <Text>48 meses</Text>
-          </Box>
-
-          <Box className={styles.oportunidadesCard}>
-            <Text>60 meses</Text>
-          </Box>
+        <Box className={styles.choiceWrapper}>
+          <Text color="#000000" fontWeight={500}>
+            Em quanto tempo você quer pagar?
+          </Text>
         </Box>
 
         <Box className={styles.valoresWrapper}>
-          <Box className={styles.oportunidadesCard}>
-            <Text>72 meses</Text>
-          </Box>
-
-          <Box className={styles.oportunidadesCard}>
-            <Text>84 meses</Text>
-          </Box>
+          {periodo?.suggestionInstallments.map(
+            (suggestionInstallment, index) => {
+              return (
+                <Box className={styles.teste}>
+                  <Button
+                    color="#000000"
+                    fontWeight={400}
+                    borderRadius={10}
+                    padding={10}
+                    onClick={getValores}
+                    key={`${index} ${suggestionInstallment}`}
+                    className={styles.oportunidadesCard}
+                  >
+                    {suggestionInstallment}
+                  </Button>
+                </Box>
+              );
+            }
+          )}
         </Box>
 
         <Box display="flex" justifyContent="center">
@@ -74,7 +104,7 @@ export default function Periodo() {
         </Box>
 
         <Box className={styles.buttonWrapper}>
-          <Link to="/opcoes">
+          <Link to="/oportunidades/valores/periodo/opcoes">
             <Button backgroundColor="#d83c95" borderRadius={20} padding={10}>
               Continuar
             </Button>

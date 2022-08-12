@@ -1,25 +1,51 @@
-import { Box } from "@mui/system";
-import Container from "../../../Components/Container";
-import styles from "./styles.module.scss";
-import useIsMobile from "../../../helpers/useIsMobile";
-import SideBar from "../../../Components/SideBar";
-import Heading from "../../../Components/Heading";
 import KeyboardBackspaceOutlinedIcon from "@mui/icons-material/KeyboardBackspaceOutlined";
-import Navigation from "../../../Components/BottomNavigation";
-import Text from "../../../Components/Text";
-import Input from "../../../Components/Input";
-import Button from "../../../Components/Button";
+import { Box } from "@mui/system";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Navigation from "../../../Components/BottomNavigation";
+import Button from "../../../Components/Button";
+import Container from "../../../Components/Container";
+import Heading from "../../../Components/Heading";
+import Input from "../../../Components/Input";
+import SideBar from "../../../Components/SideBar";
+import Text from "../../../Components/Text";
+import useIsMobile from "../../../helpers/useIsMobile";
+import styles from "./styles.module.scss";
 
 export default function Valores() {
   const isMobile = useIsMobile({ size: 768 });
+
+  const [valores, setValores] = useState();
+
+  useEffect(() => {
+    getValores();
+  }, []);
+
+  function getValores() {
+    axios
+      .get("https://5fpaprjjbl.execute-api.us-east-1.amazonaws.com/test/values")
+      .then((response) => {
+        console.log({ response });
+        setValores(response.data);
+      })
+      .catch((error) => {
+        console.log(error, "oi 2");
+      });
+  }
+
+  const formatter = new Intl.NumberFormat("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+  });
+
   return (
     <Box className={styles.container}>
       <Container>
         {isMobile ? (
           <Box className={styles.topBar}>
             <Box className={styles.backArrow}>
-              <a href="/home" rel="noopener noreferrer">
+              <a href="/oportunidades" rel="noopener noreferrer">
                 <Box className={styles.arrow}>
                   <KeyboardBackspaceOutlinedIcon />
                 </Box>
@@ -46,30 +72,30 @@ export default function Valores() {
           </Heading>
         </Box>
 
-        <Text>De quanto você precisa?</Text>
-
-        <Box className={styles.valoresWrapper}>
-          <Box className={styles.oportunidadesCard}>
-            <Text>R$300,00</Text>
-          </Box>
-
-          <Box className={styles.oportunidadesCard}>
-            <Text>R$2.660,00</Text>
-          </Box>
+        <Box className={styles.choiceWrapper}>
+          <Text color="#000000" fontWeight={500}>
+            De quanto você precisa?
+          </Text>
         </Box>
 
         <Box className={styles.valoresWrapper}>
-          <Box className={styles.oportunidadesCard}>
-            <Text>R$5.030,00</Text>
-          </Box>
-
-          <Box className={styles.oportunidadesCard}>
-            <Text>R$7.407,93</Text>
-          </Box>
+          {valores?.suggestionValues.map((suggestionValue, index) => {
+            return (
+              <Box
+                key={`${index} ${suggestionValue}`}
+                className={styles.oportunidadesCard}
+              >
+                <Button color="#000000" fontWeight={400} onClick={getValores}>
+                  {formatter.format(suggestionValue)}
+                </Button>
+              </Box>
+            );
+          })}
         </Box>
 
         <Box display="flex" justifyContent="center">
           <Text>Outro valor</Text>
+
           <Input
             type="number"
             name="Telefone"
@@ -79,7 +105,7 @@ export default function Valores() {
         </Box>
 
         <Box className={styles.buttonWrapper}>
-          <Link to="/periodo">
+          <Link to="/oportunidades/valores/periodo">
             <Button backgroundColor="#d83c95" borderRadius={20} padding={10}>
               Continuar
             </Button>

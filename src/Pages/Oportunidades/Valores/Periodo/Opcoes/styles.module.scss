@@ -48,51 +48,86 @@
     }
   }
 
-  .bankWrapper {
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 20px;
-    max-width: 370px;
-    margin: 0 auto;
+  .choiceWrapper {
+    text-align: center;
+    padding: 20px 0;
 
-    .contentWrapper {
-      display: flex;
-      margin-bottom: 20px;
-
-      .logoBanco {
-
-        img {
-          border: 1.5px solid #dcdcdc;
-          padding: 10px;
-          width: 80px;
-          border-radius: 10px;
-        }
-      }
-
-      .periodoWrapper {
-        padding-left: 15px;
-      }
-
-      .divider {
-        border-right: 1.5px solid #dcdcdc;
-        padding-left: 15px;
-      }
-
-      .juros {
-        padding-left: 15px;
-      }
-    }
-
-    .revisionWrapper {
-      border-top: 1.5px solid #dcdcdc;
-      padding-bottom: 15px;
+    @media screen and (max-width: 640px) {
+      text-align: left;
+      padding-left: 20px;
     }
   }
 
-  .buttonWrapper {
-    max-width: 150px;
-    margin: 0 auto;
-    line-height: 22px;
-    margin-top: 20px;
+  .contentWrapper {
+    padding: 0 20px;
+
+    .bankWrapper {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 370px;
+      margin: 0 auto;
+
+      .infosWrapper {
+        display: flex;
+        margin-bottom: 20px;
+
+        .logoBanco {
+          img {
+            border: 1.5px solid #dcdcdc;
+            padding: 10px;
+            width: 80px;
+            border-radius: 10px;
+          }
+        }
+
+        .periodoWrapper {
+          padding-left: 15px;
+        }
+
+        .divider {
+          border-right: 1.5px solid #dcdcdc;
+          padding-left: 15px;
+        }
+
+        .juros {
+          padding-left: 15px;
+        }
+      }
+
+      .revisionWrapper {
+        border-top: 1.5px solid #dcdcdc;
+        padding-bottom: 15px;
+        position: relative;
+
+        .mostrar {
+          display: none;
+        }
+
+        .passar_mouse:hover .mostrar {
+          display: block;
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          max-width: 110px;
+          font-size: 11px;
+          text-align: center;
+        }
+
+        svg {
+          color: #d83c95;
+          font-size: 16px;
+          margin-top: 10px;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+  .finishWrapper {
+    color: #d83c95;
+    font-weight: 600;
+    text-align: right;
+    text-decoration: underline;
   }
 }

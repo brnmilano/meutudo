@@ -48,26 +48,50 @@
     }
   }
 
+  .choiceWrapper {
+    text-align: center;
+    padding: 20px 0;
+
+    @media screen and (max-width: 640px) {
+      text-align: left;
+      padding-left: 20px;
+    }
+  }
+
   .valoresWrapper {
     display: flex;
-    justify-content: center;
-    margin-top: 15px;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+
+    @media screen and (max-width: 640px) {
+      flex-direction: column-reverse;
+    }
 
     &:last-child {
       margin-bottom: 20px;
     }
 
-    .oportunidadesCard {
-      background-color: #ffffff;
-      max-width: 160px;
+    .teste {
+      max-width: 150px;
       width: 100%;
-      padding: 12px 10px;
-      margin-right: 15px;
-      border-radius: 10px;
-      text-align: center;
 
-      &:last-child {
-        margin-right: 0;
+      @media screen and (max-width: 640px) {
+        padding-bottom: 20px;
+        margin: 0 auto;
+      }
+
+      .oportunidadesCard {
+        background-color: #ffffff;
+        max-width: 160px;
+        width: 100%;
+        padding: 12px 10px;
+        margin-right: 15px;
+        border-radius: 10px;
+        text-align: center;
+
+        &:last-child {
+          margin-right: 0;
+        }
       }
     }
   }
@@ -76,6 +100,6 @@
     max-width: 150px;
     margin: 0 auto;
     line-height: 22px;
-    margin-top: 20px;   
+    margin-top: 20px;
   }
 }
