@@ -1,15 +1,23 @@
-# Getting Started with Create React App
+## Iniciando o projeto
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```
+    git clone https://github.com/brnmilano/meutudo.git
+    cd meutudo
+```
 
-## Available Scripts
+## Iniciando o front
 
-In the project directory, you can run:
+```
+    cd meutudo
 
-### `npm start`
+    // Instalar dependencias
+    yarn 
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Desenvolvimento
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Inicia o desenvolvimento com atualização em tempo real no navegador
+
+```sh
+yarn
+```
