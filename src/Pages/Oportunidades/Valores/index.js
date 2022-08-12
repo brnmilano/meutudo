@@ -2,12 +2,12 @@ import KeyboardBackspaceOutlinedIcon from "@mui/icons-material/KeyboardBackspace
 import { Box } from "@mui/system";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import NumberFormat from "react-number-format";
 import { Link } from "react-router-dom";
 import Navigation from "../../../Components/BottomNavigation";
 import Button from "../../../Components/Button";
 import Container from "../../../Components/Container";
 import Heading from "../../../Components/Heading";
-import Input from "../../../Components/Input";
 import SideBar from "../../../Components/SideBar";
 import Text from "../../../Components/Text";
 import useIsMobile from "../../../helpers/useIsMobile";
@@ -93,15 +93,10 @@ export default function Valores() {
           })}
         </Box>
 
-        <Box display="flex" justifyContent="center">
+        <Box className={styles.moreValuesWrapper}>
           <Text>Outro valor</Text>
 
-          <Input
-            type="number"
-            name="Telefone"
-            placeholder="R$ 00,00"
-            required
-          />
+          <NumberFormat placeholder="R$ 00,00" thousandSeparator={true} prefix={"R$"} />
         </Box>
 
         <Box className={styles.buttonWrapper}>
