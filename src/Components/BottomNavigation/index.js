@@ -1,13 +1,13 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import BottomNavigation from '@mui/material/BottomNavigation';
-import BottomNavigationAction from '@mui/material/BottomNavigationAction';
+import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import LibraryBooksOutlinedIcon from "@mui/icons-material/LibraryBooksOutlined";
-import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
-import styles from "./styles.module.scss";
+import BottomNavigation from '@mui/material/BottomNavigation';
+import BottomNavigationAction from '@mui/material/BottomNavigationAction';
+import Box from '@mui/material/Box';
+import * as React from 'react';
 import { Link } from 'react-router-dom';
+import styles from "./styles.module.scss";
 
 
 export default function Navigation() {

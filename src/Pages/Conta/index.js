@@ -1,17 +1,17 @@
+import KeyboardBackspaceOutlinedIcon from "@mui/icons-material/KeyboardBackspaceOutlined";
+import { Grid } from "@mui/material";
 import Box from "@mui/material/Box";
+import Navigation from "../../Components/BottomNavigation";
 import Container from "../../Components/Container";
 import Heading from "../../Components/Heading";
-import styles from "./styles.module.scss";
+import SideBar from "../../Components/SideBar";
 import Text from "../../Components/Text";
-import KeyboardBackspaceOutlinedIcon from "@mui/icons-material/KeyboardBackspaceOutlined";
+import useAuth from "../../Contexts/useAuth";
+import useIsMobile from "../../helpers/useIsMobile";
 import perfilImage from "./Assets/bruno-milano.png";
-import { Grid } from "@mui/material";
 import Dados from "./Dados";
 import MoreInfos from "./MoreInfos";
-import SideBar from "../../Components/SideBar";
-import Navigation from "../../Components/BottomNavigation";
-import useIsMobile from "../../helpers/useIsMobile";
-import useAuth from "../../Contexts/useAuth"
+import styles from "./styles.module.scss";
 
 export default function Conta() {
   const isMobile = useIsMobile({ size: 768 });

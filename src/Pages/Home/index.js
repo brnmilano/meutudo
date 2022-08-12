@@ -1,24 +1,24 @@
 // import styles from "./styles.module.scss";
-import * as React from "react";
+import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { Box } from "@mui/system";
+import * as React from "react";
+import Navigation from "../../Components/BottomNavigation";
 import Container from "../../Components/Container";
-import styles from "./styles.module.scss";
 import Heading from "../../Components/Heading";
+import SideBar from "../../Components/SideBar";
 import Text from "../../Components/Text";
-import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
-import Offer from "./Assets/offer.png";
-import Help from "./Assets/help.png";
+import useAuth from "../../Contexts/useAuth";
+import useIsMobile from "../../helpers/useIsMobile";
+import Doubt from "./Assets/doubt.svg";
 import ErrorImage from "./Assets/error-image.png";
 import Forward from "./Assets/forward.svg";
-import Doubt from "./Assets/doubt.svg";
-import SideBar from "../../Components/SideBar";
-import Navigation from "../../Components/BottomNavigation";
-import useIsMobile from "../../helpers/useIsMobile";
+import Help from "./Assets/help.png";
 import Mail from "./Assets/mail.png";
-import useAuth from "../../Contexts/useAuth"
+import Offer from "./Assets/offer.png";
+import styles from "./styles.module.scss";
 
 export default function Home() {
   const isMobile = useIsMobile({ size: 768 });

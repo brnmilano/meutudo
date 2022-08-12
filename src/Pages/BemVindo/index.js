@@ -1,10 +1,10 @@
 import { Box } from "@mui/system";
-import Container from "../../Components/Container";
 import Button from "../../Components/Button";
-import styles from "./styles.module.scss";
+import Container from "../../Components/Container";
 import Heading from "../../Components/Heading";
-import Logo from "./Assets/logo.png";
 import useIsMobile from "../../helpers/useIsMobile";
+import Logo from "./Assets/logo.png";
+import styles from "./styles.module.scss";
 
 export default function BemVindo() {
   const isMobile = useIsMobile({ size: 768 });

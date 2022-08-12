@@ -1,13 +1,13 @@
-import styles from "./styles.module.scss";
-import { Box } from "@mui/system";
-import Logo from "./Assets/logo.png";
+import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import LibraryBooksOutlinedIcon from "@mui/icons-material/LibraryBooksOutlined";
-import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
-import Text from "../Text";
 import Button from "@mui/material/Button";
+import { Box } from "@mui/system";
 import { Link } from "react-router-dom";
+import Text from "../Text";
+import Logo from "./Assets/logo.png";
+import styles from "./styles.module.scss";
 
 export default function SideBar() {
   return (

@@ -1,13 +1,13 @@
+import KeyboardArrowRightOutlinedIcon from "@mui/icons-material/KeyboardArrowRightOutlined";
+import KeyboardBackspaceOutlinedIcon from "@mui/icons-material/KeyboardBackspaceOutlined";
 import Box from "@mui/material/Box";
+import Navigation from "../../Components/BottomNavigation";
 import Container from "../../Components/Container";
 import Heading from "../../Components/Heading";
-import styles from "./styles.module.scss";
-import Text from "../../Components/Text";
-import KeyboardArrowRightOutlinedIcon from "@mui/icons-material/KeyboardArrowRightOutlined";
 import SideBar from "../../Components/SideBar";
-import KeyboardBackspaceOutlinedIcon from "@mui/icons-material/KeyboardBackspaceOutlined";
-import Navigation from "../../Components/BottomNavigation";
+import Text from "../../Components/Text";
 import useIsMobile from "../../helpers/useIsMobile";
+import styles from "./styles.module.scss";
 
 export default function Duvidas() {
   const isMobile = useIsMobile({ size: 768 });

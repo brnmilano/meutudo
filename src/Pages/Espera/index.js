@@ -1,10 +1,10 @@
 import Box from "@mui/material/Box";
-import Container from "../../Components/Container";
-import Text from "../../Components/Text";
-import Heading from "../../Components/Heading";
-import styles from "./styles.module.scss";
 import Button from "../../Components/Button";
+import Container from "../../Components/Container";
+import Heading from "../../Components/Heading";
+import Text from "../../Components/Text";
 import useIsMobile from "../../helpers/useIsMobile";
+import styles from "./styles.module.scss";
 
 import SentimentDissatisfiedOutlinedIcon from "@mui/icons-material/SentimentDissatisfiedOutlined";
 

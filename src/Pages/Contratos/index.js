@@ -1,17 +1,17 @@
-import * as React from "react";
-import PropTypes from "prop-types";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
-import Heading from "../../Components/Heading";
-import styles from "./styles.module.scss";
-import Container from "../../Components/Container";
-import Notification from "./Assets/notification.png";
-import SideBar from "../../Components/SideBar";
 import KeyboardBackspaceOutlinedIcon from "@mui/icons-material/KeyboardBackspaceOutlined";
+import Box from "@mui/material/Box";
+import Tab from "@mui/material/Tab";
+import Tabs from "@mui/material/Tabs";
+import Typography from "@mui/material/Typography";
+import PropTypes from "prop-types";
+import * as React from "react";
 import Navigation from "../../Components/BottomNavigation";
+import Container from "../../Components/Container";
+import Heading from "../../Components/Heading";
+import SideBar from "../../Components/SideBar";
 import useIsMobile from "../../helpers/useIsMobile";
+import Notification from "./Assets/notification.png";
+import styles from "./styles.module.scss";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;

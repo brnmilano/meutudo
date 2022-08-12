@@ -1,10 +1,10 @@
-import Box from "@mui/material/Box";
-import styles from "./styles.module.scss";
-import Text from "../../../Components/Text";
-import { useState } from "react";
-import { Skeleton } from "@mui/material";
-import moment from "moment";
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
+import { Skeleton } from "@mui/material";
+import Box from "@mui/material/Box";
+import moment from "moment";
+import { useState } from "react";
+import Text from "../../../Components/Text";
+import styles from "./styles.module.scss";
 
 export default function Dados() {
   const [isLoading, setIsLoading] = useState(true);

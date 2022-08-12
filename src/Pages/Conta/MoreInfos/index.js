@@ -1,11 +1,11 @@
-import Box from "@mui/material/Box";
-import styles from "./styles.module.scss";
-import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
-import KeyboardArrowRightOutlinedIcon from "@mui/icons-material/KeyboardArrowRightOutlined";
 import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettingsOutlined";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
+import KeyboardArrowRightOutlinedIcon from "@mui/icons-material/KeyboardArrowRightOutlined";
+import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
+import Box from "@mui/material/Box";
 import Heading from "../../../Components/Heading";
 import Text from "../../../Components/Text";
+import styles from "./styles.module.scss";
 
 export default function MoreInfos() {
   return (

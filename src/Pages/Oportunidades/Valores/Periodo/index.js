@@ -1,17 +1,17 @@
-import { Box } from "@mui/system";
-import Container from "../../../../Components/Container";
-import styles from "./styles.module.scss";
-import useIsMobile from "../../../../helpers/useIsMobile";
-import SideBar from "../../../../Components/SideBar";
-import Heading from "../../../../Components/Heading";
 import KeyboardBackspaceOutlinedIcon from "@mui/icons-material/KeyboardBackspaceOutlined";
-import Navigation from "../../../../Components/BottomNavigation";
-import Text from "../../../../Components/Text";
-import Input from "../../../../Components/Input";
-import Button from "../../../../Components/Button";
-import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { Box } from "@mui/system";
 import axios from "axios";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import Navigation from "../../../../Components/BottomNavigation";
+import Button from "../../../../Components/Button";
+import Container from "../../../../Components/Container";
+import Heading from "../../../../Components/Heading";
+import Input from "../../../../Components/Input";
+import SideBar from "../../../../Components/SideBar";
+import Text from "../../../../Components/Text";
+import useIsMobile from "../../../../helpers/useIsMobile";
+import styles from "./styles.module.scss";
 
 export default function Periodo() {
   const isMobile = useIsMobile({ size: 768 });

@@ -1,13 +1,13 @@
 import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AuthProvider from "./Contexts/AuthProvider";
-import { Route, BrowserRouter, Routes } from "react-router-dom";
 
+import BemVindo from "./Pages/BemVindo";
 import Conta from "./Pages/Conta";
 import Contratos from "./Pages/Contratos";
 import Duvidas from "./Pages/Duvidas";
-import Home from "./Pages/Home";
 import Espera from "./Pages/Espera";
-import BemVindo from "./Pages/BemVindo";
+import Home from "./Pages/Home";
 import Oportunidades from "./Pages/Oportunidades";
 import Valores from "./Pages/Oportunidades/Valores";
 import Periodo from "./Pages/Oportunidades/Valores/Periodo";
