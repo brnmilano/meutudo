@@ -85,6 +85,15 @@
         }
       }
 
+      a {
+        color: #d22688;
+        font-weight: 600;
+
+        @media screen and (max-width: 768px) {
+          padding-left: 20px;
+        }
+      }
+
       .errorImage {
         width: 220px;
         height: auto;
@@ -93,10 +102,6 @@
 
         @media screen and (max-width: 768px) {
           margin-left: 58px;
-
-          > div {
-            background-color: red;
-          }
         }
       }
     }

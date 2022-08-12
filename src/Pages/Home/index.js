@@ -5,6 +5,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { Box } from "@mui/system";
 import * as React from "react";
+import { Link } from "react-router-dom";
 import Navigation from "../../Components/BottomNavigation";
 import Container from "../../Components/Container";
 import Heading from "../../Components/Heading";
@@ -109,6 +110,7 @@ export default function Home() {
               >
                 <NotificationsOutlinedIcon />
               </Button>
+              
               <Menu
                 id="basic-menu"
                 anchorEl={anchorEl}
@@ -137,7 +139,7 @@ export default function Home() {
 
             <Box>
               <Heading fontSize={18}>FGTS</Heading>
-              <Text fontSize={14}>Aqui você vê duas oportunidades</Text>
+              <Text fontSize={14}>Aqui você vê suas oportunidades</Text>
             </Box>
           </Box>
 
@@ -148,9 +150,9 @@ export default function Home() {
               alt="Logo meutudo"
             />
 
-            <Text fontSize={14} color="#7a7a7a">
-              Trabalhador informado não possui contas de FGTS
-            </Text>
+            <Link to="/oportunidades">
+              Clique e veja suas oportunidades :)
+            </Link>
           </Box>
 
           <Box className={styles.newWrapper}>
