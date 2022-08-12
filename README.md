@@ -26,5 +26,5 @@ yarn start
 Para visualizar o site em produção e mobile em seu celular, acesse:
 
 ```
-[Demo do projeto](https://artmann-git-main-brnmilano.vercel.app/).
+https://meutudo.vercel.app/
 ```
