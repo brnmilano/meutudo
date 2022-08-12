@@ -8,8 +8,6 @@
 ## Iniciando o front
 
 ```
-    cd meutudo
-    
     Instalar dependencias:
     yarn 
 ```
