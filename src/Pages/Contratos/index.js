@@ -5,6 +5,7 @@ import Tabs from "@mui/material/Tabs";
 import Typography from "@mui/material/Typography";
 import PropTypes from "prop-types";
 import * as React from "react";
+import { Link } from 'react-router-dom';
 import Navigation from "../../Components/BottomNavigation";
 import Container from "../../Components/Container";
 import Heading from "../../Components/Heading";
@@ -61,11 +62,11 @@ export default function Contratos() {
         {isMobile ? (
           <Box className={styles.topBar}>
             <Box className={styles.backArrow}>
-              <a href="/home" rel="noopener noreferrer">
+              <Link tp="/home">
                 <Box className={styles.arrow}>
                   <KeyboardBackspaceOutlinedIcon />
                 </Box>
-              </a>
+              </Link>
             </Box>
 
             <Heading fontSize={20} fontWeight={600} color="#ffffff">
@@ -77,11 +78,11 @@ export default function Contratos() {
         )}
 
         <Box className={styles.headingWrapper}>
-          <a href="/home" rel="noopener noreferrer">
+          <Link tp="/home">
             <Box className={styles.arrow}>
               <KeyboardBackspaceOutlinedIcon />
             </Box>
-          </a>
+          </Link>
 
           <Heading fontSize={20} fontWeight={600}>
             Contratos

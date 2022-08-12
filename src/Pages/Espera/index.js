@@ -1,12 +1,12 @@
+import SentimentDissatisfiedOutlinedIcon from "@mui/icons-material/SentimentDissatisfiedOutlined";
 import Box from "@mui/material/Box";
+import { Link } from "react-router-dom";
 import Button from "../../Components/Button";
 import Container from "../../Components/Container";
 import Heading from "../../Components/Heading";
 import Text from "../../Components/Text";
 import useIsMobile from "../../helpers/useIsMobile";
 import styles from "./styles.module.scss";
-
-import SentimentDissatisfiedOutlinedIcon from "@mui/icons-material/SentimentDissatisfiedOutlined";
 
 export default function Espera() {
   const isMobile = useIsMobile({ size: 768 });
@@ -33,11 +33,11 @@ export default function Espera() {
           </Text>
 
           <Box className={styles.buttonWrapper}>
-            <a href="/home" rel="noopener noreferrer">
+            <Link to="/home">
               <Button backgroundColor="#d83c95" borderRadius={10} padding={10}>
                 Voltar
               </Button>
-            </a>
+            </Link>
           </Box>
         </Box>
       </Container>

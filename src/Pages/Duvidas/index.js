@@ -1,6 +1,7 @@
 import KeyboardArrowRightOutlinedIcon from "@mui/icons-material/KeyboardArrowRightOutlined";
 import KeyboardBackspaceOutlinedIcon from "@mui/icons-material/KeyboardBackspaceOutlined";
 import Box from "@mui/material/Box";
+import { Link } from "react-router-dom";
 import Navigation from "../../Components/BottomNavigation";
 import Container from "../../Components/Container";
 import Heading from "../../Components/Heading";
@@ -19,11 +20,11 @@ export default function Duvidas() {
       {isMobile ? (
           <Box className={styles.topBar}>
             <Box className={styles.backArrow}>
-              <a href="/home" rel="noopener noreferrer">
+              <Link to="/home">
                 <Box className={styles.arrow}>
                   <KeyboardBackspaceOutlinedIcon />
                 </Box>
-              </a>
+              </Link>
             </Box>
 
             <Heading fontSize={20} fontWeight={600} color="#ffffff">
@@ -35,11 +36,11 @@ export default function Duvidas() {
         )}
 
         <Box className={styles.headingWrapper}>
-          <a href="/home" rel="noopener noreferrer">
+          <Link to="/home">
             <Box className={styles.arrow}>
               <KeyboardBackspaceOutlinedIcon />
             </Box>
-          </a>
+          </Link>
 
           <Heading fontSize={20} fontWeight={600}>
             Dúvidas
