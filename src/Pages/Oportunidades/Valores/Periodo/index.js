@@ -18,6 +18,8 @@ export default function Periodo() {
 
   const [periodo, setPeriodo] = useState();
 
+  const [value, setValue] = useState();
+
   useEffect(() => {
     getValores();
   }, []);
@@ -85,7 +87,9 @@ export default function Periodo() {
                   key={`${index} ${suggestionInstallment}`}
                   className={styles.oportunidadesCard}
                 >
-                  {suggestionInstallment}
+                  <div onClick={() => setValue(suggestionInstallment)}>
+                    {suggestionInstallment}
+                  </div>
                 </Button>
               );
             }
@@ -95,6 +99,12 @@ export default function Periodo() {
         <Box className={styles.periodWrapper}>
           <Input type="number" name="Telefone" placeholder="00" required />
           <Text>meses</Text>
+
+          {value ? (
+            <Text fontSize={18}>O prazo escolhido é de: {value}</Text>
+          ) : (
+            ""
+          )}
         </Box>
 
         <Box className={styles.buttonWrapper}>

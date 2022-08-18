@@ -90,10 +90,15 @@
 
   .periodWrapper {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     margin-top: 15px;
+    gap: 15px;
 
     input {
+      display: flex;
+      justify-content: center;
       background-color: transparent;
       border-bottom: 1px solid #b6b6b6;
       border-top-width: 0;
@@ -102,7 +107,7 @@
       width: 80px;
       text-align: center;
       outline: none;
-      margin-right: 10px;
+      padding-left: 16px;
 
       &::placeholder {
         color: #000000;

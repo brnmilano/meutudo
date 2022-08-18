@@ -18,11 +18,13 @@ export default function Valores() {
 
   const [valores, setValores] = useState();
 
+  const [value, setValue] = useState();
+
   useEffect(() => {
     getValores();
   }, []);
 
-  function getValores() {
+  function getValores(e) {
     axios
       .get("https://5fpaprjjbl.execute-api.us-east-1.amazonaws.com/test/values")
       .then((response) => {
@@ -87,7 +89,9 @@ export default function Valores() {
                 fontWeight={400}
                 onClick={getValores}
               >
-                {formatter.format(suggestionValue)}
+                <div onClick={() => setValue(suggestionValue)}>
+                  {formatter.format(suggestionValue)}
+                </div>
               </Button>
             );
           })}
@@ -101,6 +105,14 @@ export default function Valores() {
             thousandSeparator={true}
             prefix={"R$"}
           />
+
+          {value ? (
+            <Text fontSize={18}>
+              O valor escolhido é de: {formatter.format(value)}
+            </Text>
+          ) : (
+            ""
+          )}
         </Box>
 
         <Box className={styles.buttonWrapper}>
